@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/x-icon" href="favicon_io/favicon-32x32.png">
+  <title>Important Question</title>
+  <link rel="stylesheet" href="shireen.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <header>
+    <ul>
+      <li><a href="found.html">I</a></li>
+      <li><a href="MUSIC.html">LOVE</a></li>
+      <li><a href="index.HTML">YOU</a></li>
+      <li><a href="found2.html">SHIREEN</a></li>
+    </ul>
+  </header>
+  <video class="vid" autoplay loop muted playsinline src="./BG4.mp4"></video>
+  <div class="container">
+    <h1>I LOVE YOU... WILL YOU DATE ME ? </h1>
+    <p class = "btn-group">
+      <button class="but"><a href="finalpage.html">YES</a></button>
+      <button class = "but" id="noButton"><a href="finalpage.html">NO</a></button>
+    </p>  
+
+    
+  </div>
+
+  <script>
+    document.getElementById('noButton').addEventListener('mouseover', function() {
+      const button = document.getElementById('noButton');
+      const container = document.querySelector('.container');
+      const maxX = container.clientWidth - button.clientWidth;
+      const maxY = container.clientHeight - button.clientHeight;
+
+      const randomX = Math.floor(Math.random() * maxX);
+      const randomY = Math.floor(Math.random() * maxY);
+
+      button.style.position = 'absolute';
+      button.style.left = randomX + 'px';
+      button.style.top = randomY + 'px';
+    });
+    </script>
+
+</body>
+
+</html>
